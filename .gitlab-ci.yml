@@ -35,6 +35,6 @@ release:
     - 'curl --header "JOB-TOKEN: $CI_JOB_TOKEN" --upload-file TA-dac-${VERSION}.tar.gz "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/TA-dac/${VERSION}/TA-dac-${VERSION}.tar.gz"'
     - python scripts/deploy_splunk_package.py --url "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/TA-dac/${VERSION}/TA-dac-${VERSION}.tar.gz" --user "$ENV_USERNAME" --password "$ENV_PASSWORD" --host "$ENV_HOST" --port $ENV_PORT
   rules:
-    - if: '$CI_COMMIT_BRANCH == "main" && $CI_COMMIT_TAG'
+    - if: $CI_COMMIT_BRANCH == "main"
   tags: 
     - docker
