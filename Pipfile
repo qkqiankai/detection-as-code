@@ -4,9 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-sigmatools = "*"
+sigmatools = "0.20"
+"ruamel.yaml" = "0.16"
 jinja2 = "*"
-pyyaml = "*"
 
 [dev-packages]
 black = "*"
